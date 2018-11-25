@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    title:
+        label: prismify.portfolio::lang.models.project.columns.title.label
+        searchable: true
+
+    created_at:
+        label: prismify.portfolio::lang.models.all.columns.created_at.label
+        type: date
+
+    updated_at:
+        label: prismify.portfolio::lang.models.all.columns.updated_at.label
+        type: date
+
+    published_at:
+        label: prismify.portfolio::lang.models.all.columns.published_at.label
+        type: date

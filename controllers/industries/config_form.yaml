@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: prismify.portfolio::lang.controllers.industries.config.form.name
+
+# Model Form Field configuration
+form: $/prismify/portfolio/models/industry/fields.yaml
+
+# Model Class name
+modelClass: Prismify\Portfolio\Models\Industry
+
+# Default redirect location
+defaultRedirect: prismify/portfolio/industries
+
+# Create page
+create:
+    title: prismify.portfolio::lang.controllers.industries.config.form.create.title
+    redirect: prismify/portfolio/industries/update/:id
+    redirectClose: prismify/portfolio/industries
+
+# Update page
+update:
+    title: prismify.portfolio::lang.controllers.industries.config.form.update.title
+    redirect: prismify/portfolio/industries
+    redirectClose: prismify/portfolio/industries
+
+# Preview page
+preview:
+    title: prismify.portfolio::lang.controllers.industries.config.form.preview.title

@@ -1,0 +1,113 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+fields:
+    title:
+        label: prismify.portfolio::lang.models.project.fields.title.label
+        placeholder: prismify.portfolio::lang.models.project.fields.title.placeholder
+        span: left
+
+    slug:
+        label: prismify.portfolio::lang.models.project.fields.slug.label
+        placeholder: prismify.portfolio::lang.models.project.fields.slug.placeholder
+        span: right
+        preset: title
+tabs:
+    fields:
+        published:
+            label: prismify.portfolio::lang.models.all.fields.published.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.general
+            span: full
+            type: checkbox
+
+        published_at:
+            label: prismify.portfolio::lang.models.all.fields.published_at.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.general
+            span: full
+            cssClass: checkbox-align
+            type: datepicker
+            mode: datetime
+            trigger:
+                action: enable
+                field: published
+                condition: checked
+
+        excerpt:
+            label: prismify.portfolio::lang.models.project.fields.excerpt.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.general
+            cssClass: checkbox-align
+            type: textarea
+            size: small
+            span: full
+
+        purpose:
+            label: prismify.portfolio::lang.models.project.fields.purpose.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.description
+            type: richeditor
+            span: full
+        process:
+            label: prismify.portfolio::lang.models.project.fields.process.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.description
+            type: richeditor
+            span: full
+        result:
+            label: prismify.portfolio::lang.models.project.fields.result.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.description
+            type: richeditor
+            span: full
+        industries:
+            tab: prismify.portfolio::lang.models.project.fields.tabs.industries
+            type: relation
+            commentAbove: prismify.portfolio::lang.models.project.fields.industries.commentAbove
+            placeholder: prismify.portfolio::lang.models.project.fields.industries.placeholder
+
+        reviews:
+            label: prismify.portfolio::lang.models.project.fields.reviews.label
+            tab: prismify.portfolio::lang.models.project.fields.tabs.reviews
+            commentAbove: prismify.portfolio::lang.models.project.fields.reviews.comment
+            type: partial
+            path: field_reviews
+
+        meta_title:
+            label: prismify.portfolio::lang.models.all.fields.meta_title.label
+            tab: prismify.portfolio::lang.models.all.fields.tabs.meta
+            type: text
+            span: full
+
+        meta_description:
+            label: prismify.portfolio::lang.models.all.fields.meta_description.label
+            tab: prismify.portfolio::lang.models.all.fields.tabs.meta
+            type: textarea
+            size: small
+            span: full
+
+        meta_keywords:
+            label: prismify.portfolio::lang.models.all.fields.meta_keywords.label
+            tab: prismify.portfolio::lang.models.all.fields.tabs.meta
+            type: textarea
+            size: small
+            span: full
+
+secondaryTabs:
+    stretch: true
+    fields:
+        thumbnail:
+            label: prismify.portfolio::lang.models.project.fields.thumbnail.label
+            type: fileupload
+            mode: image
+            imageWidth: 260
+            imageHeight: 260
+            thumbOptions:
+                mode: crop
+                offset:
+                - 0
+                - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+
+        featured_images:
+            label: prismify.portfolio::lang.models.project.fields.featured_images.label
+            type: fileupload
+            mode: image

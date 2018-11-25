@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: prismify.portfolio::lang.controllers.reviews.config.form.name
+
+# Model Form Field configuration
+form: $/prismify/portfolio/models/review/fields.yaml
+
+# Model Class name
+modelClass: Prismify\Portfolio\Models\Review
+
+# Default redirect location
+defaultRedirect: prismify/portfolio/reviews
+
+# Create page
+create:
+    title: prismify.portfolio::lang.controllers.reviews.config.form.create.title
+    redirect: prismify/portfolio/reviews/update/:id
+    redirectClose: prismify/portfolio/reviews
+
+# Update page
+update:
+    title: prismify.portfolio::lang.controllers.reviews.config.form.update.title
+    redirect: prismify/portfolio/reviews
+    redirectClose: prismify/portfolio/reviews
+
+# Preview page
+preview:
+    title: prismify.portfolio::lang.controllers.reviews.config.form.preview.title

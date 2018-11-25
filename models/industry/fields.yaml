@@ -1,0 +1,61 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+fields:
+    name:
+        label: prismify.portfolio::lang.models.industry.fields.name.label
+        placeholder: prismify.portfolio::lang.models.industry.fields.name.placeholder
+        span: left
+
+    slug:
+        label: prismify.portfolio::lang.models.industry.fields.slug.label
+        placeholder: prismify.portfolio::lang.models.industry.fields.slug.placeholder
+        span: right
+        preset: name
+
+tabs:
+    fields:
+        description:
+            label: prismify.portfolio::lang.models.industry.fields.description.label
+            tab: prismify.portfolio::lang.models.industry.fields.tabs.description
+            type: textarea
+            size: small
+            span: full
+
+        meta_title:
+            label: prismify.portfolio::lang.models.all.fields.meta_title.label
+            tab: prismify.portfolio::lang.models.all.fields.tabs.meta
+            type: text
+            span: full
+
+        meta_description:
+            label: prismify.portfolio::lang.models.all.fields.meta_description.label
+            tab: prismify.portfolio::lang.models.all.fields.tabs.meta
+            type: textarea
+            size: small
+            span: full
+
+        meta_keywords:
+            label: prismify.portfolio::lang.models.all.fields.meta_keywords.label
+            tab: prismify.portfolio::lang.models.all.fields.tabs.meta
+            type: textarea
+            size: small
+            span: full
+
+secondaryTabs:
+    fields:
+        thumbnail:
+            label: prismify.portfolio::lang.models.industry.fields.thumbnail.label
+            type: fileupload
+            mode: image
+            imageWidth: 260
+            imageHeight: 260
+            thumbOptions:
+                mode: crop
+                offset:
+                - 0
+                - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto

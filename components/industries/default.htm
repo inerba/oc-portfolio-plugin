@@ -1,0 +1,11 @@
+{% if __SELF__.industries %}
+    {% for industry in industries %}
+    {% set projectCount = industry.project_count %}
+    <img src="{{ industry.thumbnail.path }}" alt="{{ industry.name }}">
+    <h3>
+        <a href="{{ industry.url }}">{{ industry.name }}</a>
+    </h3>
+    {% if projectCount %}
+    <p class="card-text">{{ projectCount }} projects</p>
+    {% endfor %}
+{% endif %}

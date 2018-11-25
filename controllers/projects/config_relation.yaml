@@ -1,0 +1,13 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+reviews:
+  label: prismify.portfolio::lang.controllers.projects.config.relation.reviews.label
+  view:
+    list: $/prismify/portfolio/models/review/columns.yaml
+    toolbarButtons: add|create|remove|delete
+  manage:
+    showSearch: true
+    recordsPerPage: 10
+    list: $/prismify/portfolio/models/review/columns.yaml
+    form: $/prismify/portfolio/models/review/fields.yaml

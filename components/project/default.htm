@@ -1,0 +1,37 @@
+{% set project = __SELF__.project %}
+
+<h2>{{ project.title }}</h2>
+
+<div class="purpose">
+    {{ project.purpose|raw }}
+</div>
+
+<div class="process">
+    {{ project.process|raw }}
+</div>
+
+<div class="result">
+    {{ project.result|raw }}
+</div>
+
+{% if project.featured_images.count %}
+<div class="featured-images">
+    {% for image in project.featured_images %}
+    <img
+        data-src="{{ image.filename }}"
+        src="{{ image.path }}"
+        alt="{{ image.description }}"
+        style="max-width: 100%" />
+    {% endfor %}
+</div>
+{% endif %}
+
+<p class="info">
+    Posted
+    {% if project.industries.count %} in
+    {% for industry in project.industries %}
+    <a href="{{ industry.url }}">{{ industry.name }}</a>{% if not loop.last %}, {% endif %}
+    {% endfor %}
+    {% endif %}
+    on {{ project.published_at|date('M d, Y') }}
+</p>

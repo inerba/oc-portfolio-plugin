@@ -1,0 +1,25 @@
+{% set reviews = __SELF__.reviews %}
+<div class="container">
+    <ul class="review-list">
+        {% for review in reviews %}
+        <li>
+            <blockquote class="blockquote">
+                {% if review.title %}
+                <h5>{{ review.title }}</h5>
+                {% endif %}
+                {% if review.blockquote %}
+                <p class="mb-0">{{ review.blockquote }}</p>
+                {% endif %}
+                {% if review.author_avatar %}
+                <footer class="blockquote-footer">
+                    <img class="avatar-img rounded-circle" src="{{ review.author_avatar.thumb(48, auto) }}" alt="{{ review.author_name }}">
+                    {{ review.author_name }} {% if review.author_position %}<cite title="{{ review.author_position }}">{{ review.author_position }}</cite>{% endif %}
+                </footer>
+                {% endif %}
+            </blockquote>
+        </li>
+        {% else %}
+        <li class="no-data">{{ noReviewsMessage }}</li>
+        {% endfor %}
+    </ul>
+</div>

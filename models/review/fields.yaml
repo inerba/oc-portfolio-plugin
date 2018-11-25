@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    author_avatar:
+        label: prismify.portfolio::lang.models.review.fields.author_avatar.label
+        type: fileupload
+        mode: file
+        span: right
+    title:
+        label: prismify.portfolio::lang.models.review.fields.title.label
+        type: text
+        span: left
+    author_name:
+        label: prismify.portfolio::lang.models.review.fields.author_name.label
+        type: text
+        span: right
+    blockquote:
+        label: prismify.portfolio::lang.models.review.fields.blockquote.label
+        type: textarea
+        span: left
+        size: giant
+    author_position:
+        label: prismify.portfolio::lang.models.review.fields.author_position.label
+        type: text
+        span: right
+    published:
+        label: prismify.portfolio::lang.models.all.fields.published.label
+        span: right
+        type: checkbox
+    published_at:
+        label: prismify.portfolio::lang.models.all.fields.published_at.label
+        span: right
+        cssClass: checkbox-align
+        type: datepicker
+        mode: datetime
+        trigger:
+            action: enable
+            field: published
+            condition: checked
