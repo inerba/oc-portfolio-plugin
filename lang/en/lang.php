@@ -430,8 +430,8 @@ return [
 
         'review' => [
             'columns' => [
-                'title' => [
-                    'label' => 'Title'
+                'author' => [
+                    'label' => 'Author'
                 ],
             ],
             'fields' => [

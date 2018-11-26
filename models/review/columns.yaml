@@ -6,11 +6,9 @@ columns:
     id:
         label: ID
         searchable: true
-
-    title:
-        label: prismify.portfolio::lang.models.review.columns.title.label
-        searchable: true
-
+    author:
+        label: prismify.portfolio::lang.models.review.columns.author.label
+        select: concat(author_name, ' (', author_position, ')')
     created_at:
         label: prismify.portfolio::lang.models.all.columns.created_at.label
         type: date
