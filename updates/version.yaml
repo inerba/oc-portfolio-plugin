@@ -3,3 +3,5 @@
   - create_industries_table.php
   - create_projects_table.php
   - create_reviews_table.php
+1.0.2:
+  - Small improvements and fixes
